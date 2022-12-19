@@ -6,21 +6,21 @@ pipeline {
                 echo 'Building the application...'
                 echo '...........................................................'
                 sh 'npm install'
-                sp 'npm build'
+                sp 'npm run build'
             }
         }
         stage("Test") {
             steps {
                 echo 'Testing the application...'
                 echo '...........................................................'
-                sp 'npm test'
+                sp 'npm run test'
             }
         }
         stage("Deploy") {
             steps {
                 echo 'Starting the service...'
                 echo '...........................................................'
-                sp 'npm start'
+                sp 'npm run start'
             }
         }
     }
